@@ -9,10 +9,10 @@ console.log(
   "O script JavaScript foi executado com sucesso e o DOM foi alterado!",
 );
 
-// Seleciona o span do ano atual e define o ano corrente de forma dinâmica
+// Preenche o ano atual de forma dinâmica
 const currentyear = document.querySelector("#currentyear");
 currentyear.textContent = new Date().getFullYear();
 
-// Seleciona o parágrafo da última modificação e insere a data do sistema
+// Preenche a data da última modificação do documento
 const lastModified = document.querySelector("#lastModified");
 lastModified.textContent = `Última Modificação: ${document.lastModified}`;
