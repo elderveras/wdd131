@@ -2,7 +2,7 @@
 const títuloPrincipal = document.quarySelector("h1");
 
 // Modifica o conteúdo de texto do elemento de forma dinâmica
-tituloPrincipal.textConten = "Bem-vindo ao meu Site Dinâmico, Eduardo!";
+tituloPrincipal.textContent = "Bem-vindo ao meu Site Dinâmico, Eduardo!";
 
 // Exibe uma confirmação no Console do navegador
 console.log(
