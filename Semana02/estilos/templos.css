@@ -1,0 +1,98 @@
+/* ================================================= */
+/* WDD 131 - Semana 02: Álbum de Templos (Mobile First) */
+/* ================================================= */
+
+/* Reset básico e tipografia global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Cabeçalho e Menu de Navegação (Flexbox) */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column; /* No telemóvel, os links ficam empilhados ou em linha flexível */
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Área Principal e Grelha de Imagens (CSS Grid - Mobile: 1 Coluna) */
+main {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+/* Estilo dos Cartões de Templos (<figure>) */
+figure {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
