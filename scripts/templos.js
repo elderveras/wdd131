@@ -19,7 +19,7 @@ const temples = [
     location: "Brasília, Distrito Federal, Brasil",
     dedicated: "17 de setembro de 2023",
     area: 25000,
-    imageUrl: "Imagens/brasilia-brazil-temple.jpg",
+    imageUrl: "imagens/brasilia-brazil-temple.jpg",
   },
   {
     templeName: "Idaho Falls Idaho",
