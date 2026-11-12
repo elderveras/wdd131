@@ -90,7 +90,7 @@ const temples = [
 function createTempleCard(filteredTemples) {
   const main = document.querySelector("main");
 
-  // Limpa o conteúdo atual da área principal (mantendo o h2 ou recriando-o)
+  // Limpa o conteúdo atual da área principal e recria o título
   main.innerHTML = `<h2>Álbum de Templos</h2>`;
 
   filteredTemples.forEach((temple) => {
@@ -104,7 +104,6 @@ function createTempleCard(filteredTemples) {
     img.setAttribute("height", "250");
 
     let figcaption = document.createElement("figcaption");
-    // Modificação aplicada aqui: labels em português e formatação regional pt-BR
     figcaption.innerHTML = `
       <strong>${temple.templeName}</strong><br>
       Localização: ${temple.location}<br>
@@ -135,8 +134,6 @@ homeLink.addEventListener("click", (e) => {
 
 oldLink.addEventListener("click", (e) => {
   e.preventDefault();
-  // Nota: Como as datas agora estão escritas em formato por extenso ("17 de setembro de 2023"),
-  // a extração de anos baseada em split(",") precisa de ajuste para não quebrar a lógica de datas antigas/novas.
   let oldTemples = temples.filter((temple) => {
     let year = parseInt(temple.dedicated.split(" ").pop());
     return year < 1900;
