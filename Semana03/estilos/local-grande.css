@@ -1,0 +1,33 @@
+@media screen and (min-width: 760px) {
+  .conteudo-principal {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .bloco-hero {
+    position: relative;
+  }
+
+  .cartao {
+    padding: 1.5rem;
+  }
+
+  .clima-local h2::after {
+    content: " ⛅";
+  }
+
+  .icone-clima-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .conteudo-principal {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  .bloco-hero {
+    grid-column: 1 / -1;
+  }
+}

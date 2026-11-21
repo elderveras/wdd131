@@ -1,0 +1,132 @@
+:root {
+  --cor-primaria: #133b5c;
+  --cor-secundaria: #1d5c7a;
+  --cor-destaque: #c84b31;
+  --cor-fundo: #f4f6f8;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e242b;
+  --cor-texto-suave: #4a5568;
+  --cor-borda: #d6dde5;
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-corpo: "Source Sans 3", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+.topo-pagina {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-bottom: 5px solid var(--cor-destaque);
+}
+
+.topo-pagina h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.conteudo-principal {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.bloco-hero {
+  background-color: var(--cor-superficie);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+}
+
+.bloco-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cartao {
+  background-color: var(--cor-superficie);
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid var(--cor-borda);
+}
+
+.cartao h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.icone-clima-wrapper {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+}
+
+.icone-clima {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.lista-dados {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lista-dados > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed var(--cor-borda);
+}
+
+.lista-dados > div:last-child {
+  border-bottom: none;
+}
+
+.lista-dados dt {
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+
+.lista-dados dd {
+  text-align: right;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.rodape-pagina {
+  margin-top: 1.5rem;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+  border-top: 5px solid var(--cor-destaque);
+}
+
+.rodape-pagina p + p {
+  margin-top: 0.35rem;
+  color: #e2e8f0;
+}

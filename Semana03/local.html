@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valência, Espanha — Página do País | WDD 131</title>
+    <meta
+      name="description"
+      content="Conheça Valência, Espanha: dados geográficos, clima, sensação térmica e destaques culturais em um layout responsivo."
+    />
+    <meta name="author" content="Eduardo David Barbosa Lucena de Veras" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/local.css" />
+    <link rel="stylesheet" href="estilos/local-grande.css" />
+    <script src="scripts/local.js" defer></script>
+  </head>
+  <body>
+    <header class="topo-pagina">
+      <h1>Espanha — Valência</h1>
+    </header>
+
+    <main class="conteudo-principal">
+      <section class="bloco-hero" aria-label="Imagem principal de Valência">
+        <picture>
+          <source
+            srcset="imagens/hero-grande.webp"
+            media="(min-width: 900px)"
+          />
+          <source srcset="imagens/hero-media.webp" media="(min-width: 550px)" />
+          <img
+            src="imagens/hero-pequena.webp"
+            alt="Vista panorâmica da arquitetura e espaços urbanos de Valência, na Espanha"
+            width="500"
+            height="250"
+          />
+        </picture>
+      </section>
+
+      <section class="cartao dados-pais" aria-labelledby="titulo-dados">
+        <h2 id="titulo-dados">Dados do País</h2>
+        <dl class="lista-dados">
+          <div>
+            <dt>País:</dt>
+            <dd>Espanha</dd>
+          </div>
+          <div>
+            <dt>Cidade / Região:</dt>
+            <dd>Valência (Comunidade Valenciana)</dd>
+          </div>
+          <div>
+            <dt>Idioma Oficial:</dt>
+            <dd>Espanhol (com o valenciano cooficial na região)</dd>
+          </div>
+          <div>
+            <dt>Moeda:</dt>
+            <dd>Euro (€)</dd>
+          </div>
+          <div>
+            <dt>Fuso Horário:</dt>
+            <dd>CET / UTC+1 (com horário de verão CEST / UTC+2)</dd>
+          </div>
+          <div>
+            <dt>Litoral:</dt>
+            <dd>Mar Mediterrâneo</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="cartao clima-local" aria-labelledby="titulo-clima">
+        <h2 id="titulo-clima">Clima</h2>
+        <div class="icone-clima-wrapper">
+          <span class="icone-clima" aria-hidden="true">⛅</span>
+        </div>
+        <dl class="lista-dados">
+          <div>
+            <dt>Temperatura:</dt>
+            <dd><span id="temperatura-valor">9</span> °C</dd>
+          </div>
+          <div>
+            <dt>Condição:</dt>
+            <dd>Parcialmente Nublado</dd>
+          </div>
+          <div>
+            <dt>Vento:</dt>
+            <dd><span id="vento-valor">12</span> km/h</dd>
+          </div>
+          <div>
+            <dt>Sensação Térmica:</dt>
+            <dd id="sensacao-termica">Calculando...</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="rodape-pagina">
+      <p>
+        &copy; <span id="ano-atual"></span> | Eduardo David Barbosa Lucena de
+        Veras | Recife, PE, Brasil
+      </p>
+      <p id="ultima-modificacao"></p>
+    </footer>
+  </body>
+</html>
