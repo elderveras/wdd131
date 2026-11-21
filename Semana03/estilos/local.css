@@ -110,6 +110,12 @@ body {
   color: var(--cor-texto-suave);
 }
 
+.icone-clima {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
 .lista-dados dd {
   text-align: right;
   font-weight: 600;
