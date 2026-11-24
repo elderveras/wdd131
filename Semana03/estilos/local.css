@@ -84,8 +84,10 @@ body {
 }
 
 .icone-clima {
-  font-size: 2.5rem;
-  line-height: 1;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  color: var(--cor-primaria);
 }
 
 .lista-dados {
@@ -108,12 +110,6 @@ body {
 .lista-dados dt {
   font-weight: 600;
   color: var(--cor-texto-suave);
-}
-
-.icone-clima {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
 }
 
 .lista-dados dd {
