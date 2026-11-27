@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Atividade Guiada: Tabelas, Lazy Loading e Objetos JS | WDD 131
+    </title>
+    <meta
+      name="description"
+      content="Atividade guiada da Semana 04 sobre tabelas HTML acessíveis, carregamento lento de imagens e manipulação de objetos JavaScript."
+    />
+    <meta name="author" content="Eduardo David Barbosa Lucena de Veras" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/tabelas.css" />
+    <script src="scripts/tabelas.js" defer></script>
+  </head>
+  <body>
+    <header class="topo-pagina">
+      <h1>Semana 04 — Tabelas, Lazy Loading e Objetos JS</h1>
+    </header>
+
+    <main class="conteudo-principal">
+      <section class="cartao" aria-labelledby="titulo-tabela">
+        <h2 id="titulo-tabela">Registro de Unidades e Áreas</h2>
+
+        <div class="envoltorio-tabela">
+          <table class="tabela-dados">
+            <caption>
+              Unidades cadastradas com localização, ano de dedicação, área e
+              imagem com carregamento lento.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Unidade</th>
+                <th scope="col">Localização</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Área (pés²)</th>
+                <th scope="col">Visualização</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-tabela"></tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="3">Área Total</th>
+                <td id="area-total">0</td>
+                <td>—</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape-pagina">
+      <p>
+        &copy; <span id="ano-atual"></span> | Eduardo David Barbosa Lucena de
+        Veras | Recife, PE, Brasil
+      </p>
+      <p id="ultima-modificacao"></p>
+    </footer>
+  </body>
+</html>

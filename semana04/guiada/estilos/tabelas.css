@@ -1,0 +1,157 @@
+:root {
+  --cor-primaria: #133b5c;
+  --cor-secundaria: #1d5c7a;
+  --cor-destaque: #c84b31;
+  --cor-fundo: #f4f6f8;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e242b;
+  --cor-texto-suave: #4a5568;
+  --cor-borda: #cbd5e1;
+  --cor-linha-par: #f8fafc;
+  --cor-cabecalho-tabela: #133b5c;
+  --cor-rodape-tabela: #e2e8f0;
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-corpo: "Source Sans 3", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+.topo-pagina {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-bottom: 4px solid var(--cor-destaque);
+}
+
+.topo-pagina h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.conteudo-principal {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.cartao {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.cartao h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.envoltorio-tabela {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-dados {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.tabela-dados caption {
+  caption-side: bottom;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+  padding-top: 0.75rem;
+}
+
+.tabela-dados th,
+.tabela-dados td {
+  border: 1px solid var(--cor-borda);
+  padding: 0.7rem 0.85rem;
+  vertical-align: middle;
+}
+
+.tabela-dados thead th {
+  background-color: var(--cor-cabecalho-tabela);
+  color: #ffffff;
+  font-family: var(--fonte-titulo);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.tabela-dados tbody tr:nth-child(even) {
+  background-color: var(--cor-linha-par);
+}
+
+.tabela-dados tbody tr:hover {
+  background-color: #eef4f8;
+}
+
+.numero-coluna {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.miniatura-tabela {
+  display: block;
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.tabela-dados tfoot {
+  background-color: var(--cor-rodape-tabela);
+  font-weight: 700;
+}
+
+.tabela-dados tfoot th {
+  text-align: right;
+  color: var(--cor-texto);
+}
+
+.tabela-dados tfoot td {
+  text-align: right;
+  color: var(--cor-primaria);
+}
+
+.rodape-pagina {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+  border-top: 4px solid var(--cor-destaque);
+}
+
+.rodape-pagina p + p {
+  margin-top: 0.35rem;
+  color: #e2e8f0;
+}
+
+@media screen and (min-width: 760px) {
+  .topo-pagina h1 {
+    font-size: 1.85rem;
+  }
+
+  .cartao {
+    padding: 1.75rem;
+  }
+}
