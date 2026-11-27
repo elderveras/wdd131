@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Atividade Guiada: Tabelas, Lazy Loading e Objetos JS | WDD 131
+      Álbum do Templo — Tabelas, Lazy Loading e Objetos JS | WDD 131
     </title>
     <meta
       name="description"
-      content="Atividade guiada da Semana 04 sobre tabelas HTML acessíveis, carregamento lento de imagens e manipulação de objetos JavaScript."
+      content="Álbum do Templo com tabela HTML acessível, carregamento lento de imagens e manipulação de objetos JavaScript na Semana 04."
     />
     <meta name="author" content="Eduardo David Barbosa Lucena de Veras" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,22 +22,53 @@
   </head>
   <body>
     <header class="topo-pagina">
-      <h1>Semana 04 — Tabelas, Lazy Loading e Objetos JS</h1>
+      <div class="barra-topo">
+        <span class="titulo-marca">Álbum do Templo</span>
+        <button
+          type="button"
+          id="btn-menu"
+          class="btn-menu"
+          aria-label="Abrir ou fechar menu de navegação"
+          aria-expanded="false"
+          aria-controls="menu-navegacao"
+        >
+          ☰
+        </button>
+      </div>
+      <nav
+        id="menu-navegacao"
+        class="menu-navegacao"
+        aria-label="Navegação e filtros"
+      >
+        <ul class="lista-filtros">
+          <li>
+            <a href="#todos" data-filtro="todos" class="ativo"
+              >Página Inicial</a
+            >
+          </li>
+          <li><a href="#antigo" data-filtro="antigo">Antigo</a></li>
+          <li><a href="#novo" data-filtro="novo">Novo</a></li>
+          <li><a href="#grande" data-filtro="grande">Grande</a></li>
+          <li><a href="#pequeno" data-filtro="pequeno">Pequeno</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="conteudo-principal">
+      <h1 id="titulo-secao">Álbum do Templo</h1>
+
       <section class="cartao" aria-labelledby="titulo-tabela">
-        <h2 id="titulo-tabela">Registro de Unidades e Áreas</h2>
+        <h2 id="titulo-tabela">Registro de Templos e Áreas</h2>
 
         <div class="envoltorio-tabela">
           <table class="tabela-dados">
             <caption>
-              Unidades cadastradas com localização, ano de dedicação, área e
+              Templos cadastrados com localização, ano de dedicação, área e
               imagem com carregamento lento.
             </caption>
             <thead>
               <tr>
-                <th scope="col">Unidade</th>
+                <th scope="col">Templo</th>
                 <th scope="col">Localização</th>
                 <th scope="col">Ano</th>
                 <th scope="col">Área (pés²)</th>

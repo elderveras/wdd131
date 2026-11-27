@@ -34,9 +34,21 @@ const registros = [
     area: 45800,
     imagem: "imagens/templo-madri.webp",
   },
+  {
+    nome: "Templo de Salt Lake",
+    localizacao: "Salt Lake City, Utah",
+    ano: 1893,
+    area: 382207,
+    imagem: "imagens/templo-salt-lake.webp",
+  },
 ];
 
-function renderizarTabela() {
+const linksFiltro = document.querySelectorAll(".menu-navegacao > ul a");
+const tituloSecao = document.querySelector("#titulo-secao");
+const botaoMenu = document.querySelector("#btn-menu");
+const menuNavegacao = document.querySelector("#menu-navegacao");
+
+function renderizarTabela(lista) {
   const corpoTabela = document.querySelector("#corpo-tabela");
   const celulaTotalArea = document.querySelector("#area-total");
 
@@ -45,7 +57,7 @@ function renderizarTabela() {
   corpoTabela.innerHTML = "";
   let somaArea = 0;
 
-  registros.forEach((item) => {
+  lista.forEach((item) => {
     somaArea += item.area;
 
     const tr = document.createElement("tr");
@@ -88,6 +100,57 @@ function renderizarTabela() {
   }
 }
 
+function aplicarFiltro(criterio) {
+  let filtrados = registros;
+  let rotulo = "Álbum do Templo";
+
+  if (criterio === "antigo") {
+    filtrados = registros.filter((t) => t.ano < 2000);
+    rotulo = "Álbum do Templo — Antigo";
+  } else if (criterio === "novo") {
+    filtrados = registros.filter((t) => t.ano > 2000);
+    rotulo = "Álbum do Templo — Novo";
+  } else if (criterio === "grande") {
+    filtrados = registros.filter((t) => t.area > 90000);
+    rotulo = "Álbum do Templo — Grande";
+  } else if (criterio === "pequeno") {
+    filtrados = registros.filter((t) => t.area < 40000);
+    rotulo = "Álbum do Templo — Pequeno";
+  }
+
+  if (tituloSecao) {
+    tituloSecao.textContent = rotulo;
+  }
+
+  linksFiltro.forEach((link) => {
+    link.classList.toggle("ativo", link.dataset.filtro === criterio);
+  });
+
+  renderizarTabela(filtrados);
+}
+
+if (botaoMenu && menuNavegacao) {
+  botaoMenu.addEventListener("click", () => {
+    const estaAberto = menuNavegacao.classList.toggle("aberto");
+    botaoMenu.setAttribute("aria-expanded", String(estaAberto));
+    botaoMenu.textContent = estaAberto ? "✕" : "☰";
+  });
+}
+
+linksFiltro.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    aplicarFiltro(link.dataset.filtro);
+    if (menuNavegacao && menuNavegacao.classList.contains("aberto")) {
+      menuNavegacao.classList.remove("aberto");
+      if (botaoMenu) {
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.textContent = "☰";
+      }
+    }
+  });
+});
+
 function atualizarRodape() {
   const elementoAno = document.querySelector("#ano-atual");
   const elementoModificacao = document.querySelector("#ultima-modificacao");
@@ -102,6 +165,6 @@ function atualizarRodape() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderizarTabela();
+  aplicarFiltro("todos");
   atualizarRodape();
 });
